@@ -26,7 +26,7 @@ public class OtpService {
         otpRepo.findByEmail(email).ifPresent(otpRepo::delete);
 
         String code = String.valueOf(100000 + new Random().nextInt(900000));
-        System.out.println(code);
+    
         OTP otp = new OTP();
         otp.setEmail(email);
         otp.setCode(code);
